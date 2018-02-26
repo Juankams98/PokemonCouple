@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ROJO GANA</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Varela+Round'>
+
+    <link rel="stylesheet" href="css/style.css">
+    <audio id="audio" src="music/bg.mp3" loop autoplay>
+        <source type="audio/mp3" src="music/bg.mp3">
+    </audio>
+    <script>
+        function volver() {
+            location.href = "../../index.html";
+        }
+    </script>
+</head>
+
+<body>
+    <canvas height='1' id='confetti' width='1'></canvas>
+    <script src="js/index.js"></script>
+    <img id="bback" src="images/back.png" alt="volver" onclick="volver()">
+</body>
+
+</html>

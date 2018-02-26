@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Parejas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jQuery-Flip/1.1.2/jquery.flip.js'></script>
+    <script src="index.js"></script>
+    <audio id="sound0">
+        <source type="audio/wav" src="music/sounds/0.wav">
+    </audio>
+    <audio id="sound1">
+        <source type="audio/wav" src="music/sounds/1.wav">
+    </audio>
+    <audio id="sound2">
+        <source type="audio/wav" src="music/sounds/2.wav">
+    </audio>
+    <audio id="sound3">
+        <source type="audio/wav" src="music/sounds/3.wav">
+    </audio>
+    <audio id="sound4">
+        <source type="audio/wav" src="music/sounds/4.wav">
+    </audio>
+    <audio id="sound5">
+        <source type="audio/wav" src="music/sounds/5.wav">
+    </audio>
+
+    <script>
+        $(function() {
+            $(".flip").flip({
+                trigger: 'manual'
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <audio id="audio" src="music/bg.mp3" loop autoplay>
+        <source type="audio/mp3" src="music/bg.mp3"/>
+    </audio>
+    <!-- <img id="titulo" src="images/titulo_solitario.png" alt="solitairo"> -->
+    <img id="brestart" src="images/restart.png" alt="reiniciar" onclick="generacartas()">
+    <img id="bback" src="images/back.png" alt="volver" onclick="volver()">
+    <img id="musicatitle" src="images/musica.png">
+    <img id="music" src="images/sound_on.png" onclick="music()">
+    <img id="sonidotitle" src="images/sonido.png">
+    <img id="botonsonido" src="images/sound_on.png" onclick="apagarsonido()">
+
+    <div id="marcadores">
+        <div id="marcador1-container">
+            <img src="images/marcador/marcador_rojo.png">
+        </div>
+        <div id="vs-container">
+            <img src="images/marcador/vs.png">
+        </div>
+        <div id="marcador1-pk">
+            <img id="pk0" class="pk0" src="images/marcador/pk/vacio.png" alt="">
+            <img id="pk1" class="pk1" src="images/marcador/pk/vacio.png" alt="">
+            <img id="pk2" class="pk2" src="images/marcador/pk/vacio.png" alt="">
+            <br>
+            <img id="pk3" class="pk3" src="images/marcador/pk/vacio.png" alt="">
+            <img id="pk4" class="pk4" src="images/marcador/pk/vacio.png" alt="">
+            <img id="pk5" class="pk5" src="images/marcador/pk/vacio.png" alt="">
+        </div>
+        <div id="marcador2-container">
+            <img src="images/marcador/marcador_azul.png">
+        </div>
+        <div id="marcador2-pk">
+            <img id="p2pk0" class="pk0" src="images/marcador/pk/vacio.png" alt="">
+            <img id="p2pk1" class="pk1" src="images/marcador/pk/vacio.png" alt="">
+            <img id="p2pk2" class="pk2" src="images/marcador/pk/vacio.png" alt="">
+            <br>
+            <img id="p2pk3" class="pk3" src="images/marcador/pk/vacio.png" alt="">
+            <img id="p2pk4" class="pk4" src="images/marcador/pk/vacio.png" alt="">
+            <img id="p2pk5" class="pk5" src="images/marcador/pk/vacio.png" alt="">
+        </div>
+        <img id="player-image" src="images/marcador/p1.png">
+        <img id="alert1" src="images/turno_alert.png">
+        <img id="alert2" src="images/turno_alert.png">
+    </div>
+    <br>
+
+    <div id="cartascontainer">
+        <table>
+            <tr>
+                <td>
+                    <div class="flip flip1 no-flip" id="0" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta0.jpg">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flip flip1 no-flip" id="1" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta1.jpg">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flip flip1 no-flip" id="2" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta2.jpg">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flip flip1 no-flip" id="3" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta3.jpg">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flip flip1 no-flip" id="4" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta4.jpg">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flip flip1 no-flip" id="5" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta0.jpg">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="flip flip1 no-flip" id="6" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta1.jpg">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flip flip1 no-flip" id="7" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta2.jpg">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flip flip1 no-flip" id="8" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta3.jpg">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flip flip1 no-flip" id="9" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta4.jpg">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flip flip1 no-flip" id="10" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta4.jpg">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flip flip1 no-flip" id="11" onclick="cambiarcarta(this)">
+                        <div class="front">
+                            <img class="carta" src="images/cartas/reverso_carta_rojo.jpg">
+                        </div>
+                        <div class="back">
+                            <img class="carta cartaback" src="images/cartas/carta4.jpg">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- CARTAS JUGADOR 2 -->
+
+        <div id="cartascontainer2">
+            <table>
+                <tr>
+                    <td>
+                        <div class="flip flip2 no-flip" id="12" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta0.jpg">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flip flip2 no-flip" id="13" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta1.jpg">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flip flip2 no-flip" id="14" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta2.jpg">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flip flip2 no-flip" id="15" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta3.jpg">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flip flip2 no-flip" id="16" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta4.jpg">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flip flip2 no-flip" id="17" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta0.jpg">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="flip flip2 no-flip" id="18" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta1.jpg">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flip flip2 no-flip" id="19" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta2.jpg">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flip flip2 no-flip" id="20" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta3.jpg">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flip flip2 no-flip" id="21" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta4.jpg">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flip flip2 no-flip" id="22" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta4.jpg">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flip flip2 no-flip" id="23" onclick="cambiarcarta(this)">
+                            <div class="front">
+                                <img class="carta" src="images/cartas/reverso_carta_azul.jpg">
+                            </div>
+                            <div class="back back2">
+                                <img class="carta cartaback2" src="images/cartas/carta4.jpg">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Parejas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <audio id="sound0">
+        <source type="audio/wav" src="music/sounds/0.wav">
+    </audio>
+    <audio id="sound1">
+        <source type="audio/wav" src="music/sounds/1.wav">
+    </audio>
+    <audio id="sound2">
+        <source type="audio/wav" src="music/sounds/2.wav">
+    </audio>
+    <audio id="sound3">
+        <source type="audio/wav" src="music/sounds/3.wav">
+    </audio>
+    <audio id="sound4">
+        <source type="audio/wav" src="music/sounds/4.wav">
+    </audio>
+    <audio id="sound5">
+        <source type="audio/wav" src="music/sounds/5.wav">
+    </audio>
+</head>
+
+<body>
+    <img id="titulo" src="images/titulo_solitario.png" alt="solitairo">
+    <img id="brestart" src="images/restart.png" alt="reiniciar" onclick="generacartas()">
+    <img id="bback" src="images/back.png" alt="volver">
+    <div id="marcador">
+        <img src="images/marcador/pokeball.png" alt="pokeball" id="pk0">
+        <img src="images/marcador/pokeball.png" alt="pokeball" id="pk1">
+        <img src="images/marcador/pokeball.png" alt="pokeball" id="pk2">
+        <br>
+        <img src="images/marcador/pokeball.png" alt="pokeball" id="pk3">
+        <img src="images/marcador/pokeball.png" alt="pokeball" id="pk4">
+        <img src="images/marcador/pokeball.png" alt="pokeball" id="pk5">
+    </div>
+
+    <br>
+    <div id="cartascontainer">
+        <img id="0" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+        <img id="1" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+        <img id="2" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+        <img id="3" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+        <img id="4" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+        <img id="5" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+        <br>
+        <img id="6" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+        <img id="7" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+        <img id="8" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+        <img id="9" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+        <img id="10" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+        <img id="11" class="carta" onclick="cambiarcarta(this)" src="images/cartas/reverso_carta.jpg" alt="carta">
+    </div>
+</body>
+
+</html>

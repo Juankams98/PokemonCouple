@@ -1,0 +1,29 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url(../images/bg.jpg);
+}
+
+#bback {
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+}
+
+#bback:hover {
+    cursor: pointer;
+}
+
+#confetti {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}

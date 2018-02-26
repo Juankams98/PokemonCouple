@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Parejas Pokemon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <audio id="startsound" src="music/sounds/start.wav"></audio>
+    <audio id="opcion" src="music/sounds/opcion.wav"></audio>
+</head>
+
+<body>
+    <video autoplay="autoplay" loop="loop" id="video_background" preload="auto" volume="50" />
+    <source src="video/bg.mp4" type="video/mp4" />
+    </video/>
+    <div id="menu">
+        <img id="titulo" src="images/titulo.png" alt="titulo">
+        <img id="sound" src="images/sound_on.png">
+        <img id="video" src="images/pause_video.png">
+        <div id="select_modo_container">
+            <img src="images/escoge_modo.png" alt="titulo de seleccion de modo">
+            <img id="m_sol" src="images/modo_solitario.png" alt="opcion para jugar solo">
+            <br>
+            <img id="m_due" src="images/modo_duelo.png" alt="opcion para jugar en pareja">
+        </div>
+        <img id="play" src="images/play.png" alt="boton para jugar">
+        <img id="desc_s" src="images/desc_solitario.png" alt="descripcion modo soliario">
+        <img id="desc_d" src="images/desc_duelo.png" alt="descripcion modo soliario">
+    </div>
+
+</body>
+
+</html>

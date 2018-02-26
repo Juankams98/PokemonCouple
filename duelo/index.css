@@ -1,0 +1,221 @@
+body {
+    background-image: url(images/bg2.jpg)
+}
+
+.carta {
+    width: 95.23px;
+    height: 138.09px;
+}
+
+#titulo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+#music {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#musicatitle {
+    position: absolute;
+    bottom: 18px;
+    right: 106px;
+}
+
+#botonsonido {
+    position: absolute;
+    bottom: 12px;
+    right: 428px;
+}
+
+#sonidotitle {
+    position: absolute;
+    bottom: 21px;
+    right: 533px;
+}
+
+#marcador2-container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    float: right;
+}
+
+#marcador1-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    float: right;
+}
+
+#marcador1-pk {
+    position: absolute;
+    top: 12px;
+    left: 212px;
+}
+
+#pk0 {
+    margin-right: 16px;
+}
+
+#pk1 {
+    margin-right: 14.3px;
+}
+
+#pk3 {
+    position: absolute;
+    top: 96px;
+    left: 40px;
+}
+
+#pk4 {
+    position: absolute;
+    top: 96px;
+    left: 127px;
+}
+
+#marcador2-pk {
+    position: absolute;
+    right: 23.3%;
+    top: 12px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: "FlipH";
+    filter: FlipH;
+}
+
+#pk5 {
+    position: relative;
+    top: -47px;
+    left: 210px;
+}
+
+#p2pk0 {
+    position: relative;
+    right: 14%;
+}
+
+#p2pk1 {
+    position: relative;
+    right: 6.3%;
+}
+
+#p2pk2 {
+    position: relative;
+    right: -0.7%;
+}
+
+#p2pk3 {
+    position: absolute;
+    top: 97px;
+    right: 218px;
+}
+
+#p2pk4 {
+    position: absolute;
+    top: 91px;
+    right: 140px;
+}
+
+#p2pk5 {
+    position: absolute;
+    top: 93px;
+    right: 47px;
+}
+
+#vs-container {
+    margin-left: 40%;
+}
+
+#player-image {
+    position: absolute;
+    left: 44.5%;
+    top: 37%;
+}
+
+#cartascontainer {
+    position: absolute;
+    top: 35%;
+    left: 0.5%;
+}
+
+#cartascontainer>img {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#cartascontainer2 {
+    position: absolute;
+    right: -126%;
+    top: 0%;
+}
+
+#alert1,
+#alert2 {
+    position: absolute;
+    z-index: 100;
+    top: 245px;
+    /*
+    -moz-animation-duration: 800ms;
+    -moz-animation-name: blink;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: alternate;
+    -webkit-animation-duration: 800ms;
+    -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-duration: 800ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    */
+}
+
+#alert2 {
+    right: 40%;
+    left: 56%;
+}
+
+#brestart {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+#bback {
+    position: absolute;
+    left: 20px;
+    bottom: 92px;
+}
+
+@-moz-keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
